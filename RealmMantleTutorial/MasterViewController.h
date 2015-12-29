@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "ArticleRealm.h"
 
 @class DetailViewController;
 
@@ -16,8 +17,11 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+/*! @brief The list of articles from New York Times. */
+@property (weak, nonatomic) RLMResults *articles;
 
 @end
 
